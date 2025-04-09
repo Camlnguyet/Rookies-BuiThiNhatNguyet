@@ -1,0 +1,12 @@
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/bin/Debug/net9.0/BonApp.Domain.deps.json
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/bin/Debug/net9.0/BonApp.Domain.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/bin/Debug/net9.0/BonApp.Domain.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.AssemblyInfoInputs.cache
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.AssemblyInfo.cs
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.csproj.CoreCompileInputs.cache
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.sourcelink.json
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/refint/BonApp.Domain.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/ref/BonApp.Domain.dll

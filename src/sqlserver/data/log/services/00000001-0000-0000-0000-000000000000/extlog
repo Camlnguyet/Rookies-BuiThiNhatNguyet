@@ -1,0 +1,24 @@
+2025-04-09T09:31:01.141Z [dotnet /app/ASDE.Dotnet.dll] [184] ASDE.Dotnet starting up
+2025-04-09T09:31:01.142Z [dotnet /app/ASDE.Dotnet.dll] [184] MSSQL_LCID: 
+2025-04-09T09:31:01.153Z [dotnet /app/ASDE.Dotnet.dll] [184] Creating ASA Job Manager with: OfflineEdgeHubClientWrapper
+2025-04-09T09:31:01.204Z [dotnet /app/ASDE.Dotnet.dll] [184] Initializing ASA Job Manager
+2025-04-09T09:31:01.211Z [dotnet /app/ASDE.Dotnet.dll] [184] ASDE.Dotnet entering main loop.
+2025-04-09T09:31:01.211Z [dotnet /app/ASDE.Dotnet.dll] [184] Satellite listener exists. Starting ASASatelliteService.
+2025-04-09T09:31:01.212Z [dotnet /app/ASDE.Dotnet.dll] [184] Waiting for next message
+2025-04-09T09:31:01.424Z [dotnet /app/ASDE.Dotnet.dll] [184] Waiting for next message
+2025-04-09T09:31:01.467Z [dotnet /app/ASDE.Dotnet.dll] [184] Operation: NotifyJobsRecovered
+2025-04-09T09:31:01.468Z [dotnet /app/ASDE.Dotnet.dll] [184] Job recovery notification received.
+2025-04-09T09:31:01.468Z [dotnet /app/ASDE.Dotnet.dll] [184] Operation: NotifyJobsRecovered success: True. message: 
+2025-04-09T09:31:01.478Z [dotnet /app/ASDE.Dotnet.dll] [184] Sending response message for e11662a3-1950-4f8e-b45d-4523f821d1bd with length: 162
+2025-04-09T09:36:29.451Z [dotnet /app/ASDE.Dotnet.dll] [175] ASDE.Dotnet starting up
+2025-04-09T09:36:29.452Z [dotnet /app/ASDE.Dotnet.dll] [175] MSSQL_LCID: 
+2025-04-09T09:36:29.462Z [dotnet /app/ASDE.Dotnet.dll] [175] Creating ASA Job Manager with: OfflineEdgeHubClientWrapper
+2025-04-09T09:36:29.512Z [dotnet /app/ASDE.Dotnet.dll] [175] Initializing ASA Job Manager
+2025-04-09T09:36:29.519Z [dotnet /app/ASDE.Dotnet.dll] [175] ASDE.Dotnet entering main loop.
+2025-04-09T09:36:29.520Z [dotnet /app/ASDE.Dotnet.dll] [175] Satellite listener exists. Starting ASASatelliteService.
+2025-04-09T09:36:29.521Z [dotnet /app/ASDE.Dotnet.dll] [175] Waiting for next message
+2025-04-09T09:36:29.913Z [dotnet /app/ASDE.Dotnet.dll] [175] Waiting for next message
+2025-04-09T09:36:29.960Z [dotnet /app/ASDE.Dotnet.dll] [175] Operation: NotifyJobsRecovered
+2025-04-09T09:36:29.962Z [dotnet /app/ASDE.Dotnet.dll] [175] Job recovery notification received.
+2025-04-09T09:36:29.962Z [dotnet /app/ASDE.Dotnet.dll] [175] Operation: NotifyJobsRecovered success: True. message: 
+2025-04-09T09:36:29.974Z [dotnet /app/ASDE.Dotnet.dll] [175] Sending response message for 01d4fa77-b60d-4683-9d74-2ecce47b8b38 with length: 162
