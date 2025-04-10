@@ -15,7 +15,7 @@ Dự án áp dụng mô hình Clean Architecture kết hợp với Repository Pa
 - /BakeryShop.Infrastructure: EF Core, Repository implementation
 ## Đang phát triển
 - [x] Tạo structure project
-- [-] Xây dựng database (1/2)
+- [x] Xây dựng database
 - [ ] Chức năng đăng ký / đăng nhập
 - [ ] Xem sản phẩm, chọn sản phẩm
 - [ ] Quản lý giỏ hàng

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "HyNakaWNu3QYlvfg8CgWwBBfGURtjnD8xJpuJn+7x/U=",
+  "Source": "BonApp.API",
+  "BasePath": "_content/BonApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
