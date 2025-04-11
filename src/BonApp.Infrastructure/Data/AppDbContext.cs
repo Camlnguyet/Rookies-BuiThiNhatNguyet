@@ -5,15 +5,15 @@ namespace BonApp.Infrastructure.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<Address> Addresses => Set<Address>();
-    public DbSet<Category> Categories => Set<Category>();
-    public DbSet<Product> Products => Set<Product>();
-    public DbSet<User> Users => Set<User>();
-    public DbSet<Order> Orders => Set<Order>();
-    public DbSet<OrderDetail> OrderDetails => Set<OrderDetail>();
-    public DbSet<Cart> Carts => Set<Cart>();
-    public DbSet<CartDetail> CartsDetail => Set<CartDetail>();
-    public DbSet<Payment> Payments => Set<Payment>();
-    public DbSet<Review> Reviews => Set<Review>();
+    public DbSet<Address> Addresses { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderDetail> OrderDetails { get; set; }
+    public DbSet<Cart> Carts { get; set; }
+    public DbSet<CartDetail> CartsDetail { get; set; }
+    public DbSet<Payment> Payments { get; set; }
+    public DbSet<Review> Reviews { get; set; }
 
 }
