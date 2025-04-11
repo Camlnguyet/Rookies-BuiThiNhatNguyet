@@ -24,32 +24,49 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.Address", b =>
                 {
-                    b.Property<int>("AddressId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddressId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("State")
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<string>("District")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("HouseNumber")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Street")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Zip_code")
+                    b.Property<string>("Ward")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("AddressId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -58,19 +75,26 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.Cart", b =>
                 {
-                    b.Property<int>("CartId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("CartId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -79,14 +103,19 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.CartDetail", b =>
                 {
-                    b.Property<int>("CartDetailId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CartDetailId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CartId")
                         .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -94,7 +123,12 @@ namespace BonApp.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("CartDetailId");
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("CartId");
 
@@ -105,24 +139,32 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.Category", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CategoryName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
-                    b.HasKey("CategoryId");
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Categories");
                 });
@@ -135,8 +177,10 @@ namespace BonApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("Order_Date")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<decimal>("Price_At_Purchase")
                         .HasColumnType("decimal(18,2)");
@@ -146,7 +190,13 @@ namespace BonApp.Infrastructure.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -160,11 +210,16 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.OrderDetail", b =>
                 {
-                    b.Property<int>("OrderDetailId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderDetailId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -178,7 +233,12 @@ namespace BonApp.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("OrderDetailId");
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("OrderId");
 
@@ -189,41 +249,64 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.Payment", b =>
                 {
-                    b.Property<int>("OrderId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("PaymentDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
 
                     b.Property<string>("PaymentMethod")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("OrderId");
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
 
                     b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("BonApp.Domain.Entities.Product", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DateProduce")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<DateTimeOffset>("DateProduce")
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("DateUse")
                         .HasColumnType("int");
@@ -232,14 +315,23 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ProductDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ProductId");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
@@ -248,15 +340,20 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.Review", b =>
                 {
-                    b.Property<int>("ReviewId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Comment")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -264,10 +361,15 @@ namespace BonApp.Infrastructure.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("ReviewId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ProductId");
 
@@ -278,45 +380,64 @@ namespace BonApp.Infrastructure.Migrations
 
             modelBuilder.Entity("BonApp.Domain.Entities.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreateAt")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.HasKey("UserId");
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnUpdate()
+                        .HasColumnType("datetimeoffset")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PhoneNumber")
+                        .IsUnique();
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

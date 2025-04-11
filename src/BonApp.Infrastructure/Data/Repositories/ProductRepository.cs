@@ -1,54 +1,31 @@
-// using BonApp.Domain.Entities;
-// using BonApp.Domain.Interfaces;
-// using Microsoft.EntityFrameworkCore;
+using BonApp.Domain.Entities;
+using BonApp.Domain.Interfaces;
 
-// namespace BonApp.Infrastructure.Data.Repositories;
+namespace BonApp.Infrastructure.Data.Repositories;
 
-// public class ProductRepository : IProductRepository
-// {
-//     private readonly AppDbContext _context;
-//     private readonly DbSet<Product> _products;
+public class ProductRepository : IProductRepository
+{
+    private readonly AppDbContext _context;
+    public ProductRepository(AppDbContext context)
+    {
+        _context = context;
+    }
 
-//     public ProductRepository(AppDbContext context)
-//     {
-//         _context = context;
-//         _products = context.Set<Product>();
-//     }
-//     public async Task<Product?> GetByIdAsync(int id)
-//     {
-//         return _products.GetByIdAsync(id);
-//     }
-//     public async Task<Product> FindByIdAsync(int id)
-//     {
-//         return await _products.FindAsync(id);
-//     }
-//     public async Task<IEnumerable<Product>> GetAllAsync()
-//     {
-//         return await _products.ToListAsync();
-//     }
-//     public async Task AddAsync(Product product)
-//     {
-//         await _products.AddAsync(product);
-//     }
-//     public void Update(Product product)
-//     {
-//         _products.Update(product);
-//     }
-//     public void Delete(Product product)
-//     {
-//         _products.Remove(product);
-//     }
-//     public async Task<IEnumerable<Product>> GetProductsAsync(int count)
-//     {
-//         return await _products.GetAllAsync()
-//     }
-//     public Task<IEnumerable<Product>> GetTopSellingAsync(int count)
-//     {
-//         throw new NotImplementedException();
-//     }
+    public IQueryable<Product> Products => _context.Products;
+    public IQueryable<Category> Categories => _context.Categories;
 
-//     public Task<IEnumerable<Product>> SearchByNameAsync(string keyword)
-//     {
-//         throw new NotImplementedException();
-//     }
-// }
+    public void Add(Product product)
+    {
+        _context.Products.Add(product);
+    }
+
+    public void Update(Product product)
+    {
+        _context.Products.Update(product);
+    }
+
+    public void Delete(Product product)
+    {
+        _context.Products.Remove(product);
+    }
+}
