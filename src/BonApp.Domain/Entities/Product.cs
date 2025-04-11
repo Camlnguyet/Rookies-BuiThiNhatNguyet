@@ -1,36 +1,23 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.Design;
+
 
 namespace BonApp.Domain.Entities;
 
-public class Product
+public class Product : BaseEntity
 {
-    [Key]
-    public int ProductId { get; set; }
-    [Required]
     public required string ProductName { get; set; }
-    public string ProductDescription { get; set; } = string.Empty;
-    public decimal Price { get; set; }
-    public DateTime DateProduce { get; set; }
+    public string ProductDescription { get; set; } = default!;
+    public required decimal Price { get; set; }
+    public required string Status { get; set; } = default!;
+    public DateTimeOffset DateProduce { get; set; } = DateTime.UtcNow;
     // số ngày sản phẩm sử dụng được
-    [Required]
     public required int DateUse { get; set; }
     // product-category
-    [ForeignKey("Category")]
     public int CategoryId { get; set; }
-    public virtual Category Category { get; set; }
-
+    public virtual Category Category { get; set; } = default!;
     // orderdetail - product
-    public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+    public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new HashSet<OrderDetail>();
     // review-product
-    public virtual ICollection<Review> Reviews { get; set; }
+    public virtual ICollection<Review> Reviews { get; set; } = new HashSet<Review>();
     // cart-detail - product
-    public virtual ICollection<CartDetail> CartDetails { get; set; }
-    public Product()
-    {
-        Reviews = new HashSet<Review>();
-        OrderDetails = new HashSet<OrderDetail>();
-        CartDetails = new HashSet<CartDetail>();
-    }
+    public virtual ICollection<CartDetail> CartDetails { get; set; } = new HashSet<CartDetail>();
 }

@@ -1,29 +1,13 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
 namespace BonApp.Domain.Entities;
 
-public class Review
+public class Review : BaseEntity
 {
-    //  review_id integer [primary key]
-    //   user_id integer
-    //   product_id integer
-    //   rating integer [note:"Giới hạn 5 sao"]
-    //   comment varchar
-    //   created_at timestamp
-    [Key]
-    public int ReviewId { get; set; }
-    [Required]
     public required int Rating { get; set; }
-    public string Comment { get; set; } = string.Empty;
-
+    public string Comment { get; set; } = default!;
     // review - user
-    [ForeignKey("User")]
     public int UserId { get; set; }
-    public virtual User User { get; set; }
-
+    public virtual User User { get; set; } = default!;
     // review-product
-    [ForeignKey("Product")]
     public int ProductId { get; set; }
-    public virtual Product Product { get; set; }
+    public virtual Product Product { get; set; } = default!;
 }
