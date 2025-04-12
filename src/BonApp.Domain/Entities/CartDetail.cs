@@ -2,9 +2,9 @@
 
 namespace BonApp.Domain.Entities;
 
-public class CartDetail: BaseEntity
+public class CartDetail : BaseEntity
 {
-    public required int Quantity { get; set; }
+    public int Quantity { get; set; }
     // cart-cart.detail
     public int CartId { get; set; }
     public virtual required Cart Cart { get; set; }

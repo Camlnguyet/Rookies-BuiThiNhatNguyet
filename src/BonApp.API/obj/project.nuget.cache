@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "6zFFOmdNCwU=",
+  "dgSpecHash": "SK8RoMBy2rI=",
   "success": true,
   "projectFilePath": "/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.API/BonApp.API.csproj",
   "expectedPackageFiles": [
+    "/Users/chocodark/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/chocodark/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/microsoft.bcl.cryptography/9.0.0/microsoft.bcl.cryptography.9.0.0.nupkg.sha512",
+    "/Users/chocodark/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/microsoft.data.sqlclient/6.0.1/microsoft.data.sqlclient.6.0.1.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
     "/Users/chocodark/.nuget/packages/microsoft.entityframeworkcore/9.0.4/microsoft.entityframeworkcore.9.0.4.nupkg.sha512",

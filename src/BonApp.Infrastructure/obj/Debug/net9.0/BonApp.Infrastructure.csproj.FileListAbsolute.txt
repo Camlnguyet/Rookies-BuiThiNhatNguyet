@@ -16,3 +16,5 @@
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Infrastructure/obj/Debug/net9.0/BonApp.Infrastructure.pdb
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Infrastructure/obj/Debug/net9.0/BonApp.Infrastructure.genruntimeconfig.cache
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Infrastructure/obj/Debug/net9.0/ref/BonApp.Infrastructure.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Infrastructure/bin/Debug/net9.0/BonApp.Application.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Infrastructure/bin/Debug/net9.0/BonApp.Application.pdb

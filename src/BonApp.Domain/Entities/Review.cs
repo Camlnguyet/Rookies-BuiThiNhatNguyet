@@ -2,7 +2,7 @@ namespace BonApp.Domain.Entities;
 
 public class Review : BaseEntity
 {
-    public required int Rating { get; set; }
+    public int Rating { get; set; }
     public string Comment { get; set; } = default!;
     // review - user
     public int UserId { get; set; }

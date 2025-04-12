@@ -9,6 +9,6 @@ public class CartController : Controller
     private ICartRepository cartRepository { get; set; }
     public CartController()
     {
-        cartRepository = new CartRepository();
+        // cartRepository = new CartRepository();
     }
 }

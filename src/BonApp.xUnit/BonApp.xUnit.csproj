@@ -18,4 +18,10 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BonApp.Application\BonApp.Application.csproj" />
+    <ProjectReference Include="..\BonApp.Domain\BonApp.Domain.csproj" />
+    <ProjectReference Include="..\BonApp.Infrastructure\BonApp.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

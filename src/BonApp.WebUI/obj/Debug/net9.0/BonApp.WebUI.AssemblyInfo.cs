@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BonApp.WebUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8df6228b0f2c85622e120e2ebb500ed956de2c86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab1b536af21242abd3af8d8340ba5adc39f2611")]
 [assembly: System.Reflection.AssemblyProductAttribute("BonApp.WebUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BonApp.WebUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

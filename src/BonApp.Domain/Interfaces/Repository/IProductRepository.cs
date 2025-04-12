@@ -5,8 +5,6 @@ namespace BonApp.Domain.Interfaces;
 
 public interface IProductRepository
 {
-    // GetAll, GetById, Add, Update, Delete, SaveChange
-
     // Lọc entity theo điều kiện
     // Task<IEnumerable<T>> FindAsync (Expression<Func<T, bool>> predicate);
     // join bảng, viết query điều kiện 

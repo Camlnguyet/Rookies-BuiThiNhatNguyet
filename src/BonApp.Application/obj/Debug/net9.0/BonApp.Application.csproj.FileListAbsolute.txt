@@ -1,0 +1,16 @@
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/bin/Debug/net9.0/BonApp.Application.deps.json
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/bin/Debug/net9.0/BonApp.Application.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/bin/Debug/net9.0/BonApp.Application.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/bin/Debug/net9.0/BonApp.Domain.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/bin/Debug/net9.0/BonApp.Domain.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.csproj.AssemblyReference.cache
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.AssemblyInfoInputs.cache
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.AssemblyInfo.cs
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.csproj.CoreCompileInputs.cache
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.sourcelink.json
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.A.F7DB93AD.Up2Date
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/refint/BonApp.Application.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/BonApp.Application.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Application/obj/Debug/net9.0/ref/BonApp.Application.dll

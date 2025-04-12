@@ -92,3 +92,5 @@
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.API/bin/Debug/net9.0/BonApp.Infrastructure.dll
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.API/bin/Debug/net9.0/BonApp.Domain.pdb
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.API/bin/Debug/net9.0/BonApp.Infrastructure.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.API/bin/Debug/net9.0/AutoMapper.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.API/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
