@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BonApp.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab1b536af21242abd3af8d8340ba5adc39f2611")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c39042a885543962fe6e1e714fd1abcabed576f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BonApp.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BonApp.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
