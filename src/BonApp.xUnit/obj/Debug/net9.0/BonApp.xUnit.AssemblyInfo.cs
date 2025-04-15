@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BonApp.xUnit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ab1b536af21242abd3af8d8340ba5adc39f2611")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecf2760354e4db502ec410c497b50d00e7172f5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BonApp.xUnit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BonApp.xUnit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

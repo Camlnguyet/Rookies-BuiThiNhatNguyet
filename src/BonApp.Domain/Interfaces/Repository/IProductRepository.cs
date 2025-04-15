@@ -17,5 +17,7 @@ public interface IProductRepository
     // Các phương thức riêng cho Product-> chuyển sang service
 
     // Lưu thay đổi (nếu dùng Unit of work, phương thức này có thể không cần)
-    // Task SaveChangesAsync();
+    Task SaveChangesAsync();
+    Task AddAsync(Product product);
+    Task<IEnumerable<Product>> GetAllAsync();
 }

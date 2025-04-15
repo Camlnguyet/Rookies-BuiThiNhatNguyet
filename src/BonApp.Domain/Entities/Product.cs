@@ -4,13 +4,13 @@ namespace BonApp.Domain.Entities;
 
 public class Product : BaseEntity
 {
-    public required string ProductName { get; set; }
+    public string ProductName { get; set; } = default!;
     public string ProductDescription { get; set; } = default!;
-    public required decimal Price { get; set; }
-    public required string Status { get; set; } = default!;
+    public decimal Price { get; set; }
+    public string Status { get; set; } = default!;
     public DateTimeOffset DateProduce { get; set; } = DateTime.UtcNow;
     // số ngày sản phẩm sử dụng được
-    public required int DateUse { get; set; }
+    public int DateUse { get; set; }
     // product-category
     public int CategoryId { get; set; }
     public virtual Category Category { get; set; } = default!;

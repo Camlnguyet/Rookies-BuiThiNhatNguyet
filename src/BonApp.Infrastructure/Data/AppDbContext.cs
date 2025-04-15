@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using BonApp.Domain.Entities;
 using BonApp.Infrastructure.Configuration;
+using BonApp.Domain.Interfaces;
 
 namespace BonApp.Infrastructure.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext : DbContext, IUnitOfWork
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
@@ -24,17 +25,20 @@ public class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.ApplyConfiguration(new ConfigurationAddress());
-        modelBuilder.ApplyConfiguration(new ConfigurationCart());
-        modelBuilder.ApplyConfiguration(new ConfigurationCartDetail());
-        modelBuilder.ApplyConfiguration(new ConfigurationCategory());
-        modelBuilder.ApplyConfiguration(new ConfigurationOrderDetail());
-        modelBuilder.ApplyConfiguration(new ConfigurationOrder());
-        modelBuilder.ApplyConfiguration(new ConfigurationPayment());
-        modelBuilder.ApplyConfiguration(new ConfigurationProduct());
-        modelBuilder.ApplyConfiguration(new ConfigurationReview());
-        modelBuilder.ApplyConfiguration(new ConfigurationUser());
-
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        modelBuilder.Entity<Category>().HasIndex(c => c.CategoryName).IsUnique();
+        // modelBuilder.ApplyConfiguration(new ConfigurationAddress());
+        // modelBuilder.ApplyConfiguration(new ConfigurationCart());
+        // modelBuilder.ApplyConfiguration(new ConfigurationCartDetail());
+        // modelBuilder.ApplyConfiguration(new ConfigurationCategory());
+        // modelBuilder.ApplyConfiguration(new ConfigurationOrderDetail());
+        // modelBuilder.ApplyConfiguration(new ConfigurationOrder());
+        // modelBuilder.ApplyConfiguration(new ConfigurationPayment());
+        // modelBuilder.ApplyConfiguration(new ConfigurationProduct());
+        // modelBuilder.ApplyConfiguration(new ConfigurationReview());
+        // modelBuilder.ApplyConfiguration(new ConfigurationUser());
+        // modelBuilder.Entity<Category>()
+        //     .HasKey(c => c.Id);
     }
 
 }

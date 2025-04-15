@@ -1,9 +1,8 @@
-// using BonApp.Domain.Entities;
+using BonApp.Domain.Entities;
 
-// namespace BonApp.Domain.Interfaces;
+namespace BonApp.Domain.Interfaces;
 
-// public interface IUnitOfWork
-// {
-//     IGenericRepository<Product> Products { get; }
-//     Task<int> SaveChangesAsync();
-// }
+public interface IUnitOfWork : IDisposable
+{
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+}

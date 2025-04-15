@@ -54,9 +54,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -87,9 +85,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -124,9 +120,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -159,12 +153,18 @@ namespace BonApp.Infrastructure.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryName")
+                        .IsUnique();
 
                     b.ToTable("Categories");
                 });
@@ -194,9 +194,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(40)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -234,9 +232,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -277,9 +273,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -327,9 +321,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.HasKey("Id");
 
@@ -362,9 +354,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -422,9 +412,7 @@ namespace BonApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(40)");
 
                     b.Property<DateTimeOffset>("UpdatedAt")
-                        .ValueGeneratedOnUpdate()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                        .HasColumnType("datetimeoffset");
 
                     b.Property<string>("UserName")
                         .IsRequired()

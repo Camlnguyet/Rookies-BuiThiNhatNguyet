@@ -13,6 +13,8 @@ public class OtherMapper : Profile
         CreateMap<Review, ReviewDto>().ReverseMap();
         CreateMap<Order, OrderDto>().ReverseMap();
         CreateMap<Cart, CartDto>().ReverseMap();
+        CreateMap<Category, CategoryDto>().ReverseMap();
         CreateMap<CartDetail, CartItemDto>().ReverseMap();
+        CreateMap<Category, StatusCategoryDto>().ReverseMap();
     }
 }

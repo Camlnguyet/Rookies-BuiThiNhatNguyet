@@ -1,19 +1,23 @@
-// using BonApp.Domain.Entities;
-// using BonApp.Domain.Interfaces;
+using BonApp.Domain.Entities;
+using BonApp.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-// namespace BonApp.Infrastructure.Data.Repositories;
+namespace BonApp.Infrastructure.Data.Repositories;
 
-// public class UnitOfWork : IUnitOfWork
-// {
-//     private readonly AppDbContext _context;
-//     private IGenericRepository<Product>? _productRepo;
-//     public UnitOfWork(AppDbContext context)
-//     {
-//         _context = context;
-//     }
+public class UnitOfWork : IUnitOfWork
+{
+    private readonly AppDbContext _context;
 
-//     public IGenericRepository<Product> Products =>
-//     _productRepo ??= new GenericRepository<Product>(_context);
-//     public async Task<int> SaveChangesAsync() => await _context.SaveChangesAsync();
-//     public void Dispose() => _context.Dispose();
-// }
+    public UnitOfWork(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    // public async Task<int> SaveChangesAsync() => await _context.SaveChangesAsync();
+    public void Dispose() => _context.Dispose();
+
+    public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        return await _context.SaveChangesAsync(cancellationToken);
+    }
+}

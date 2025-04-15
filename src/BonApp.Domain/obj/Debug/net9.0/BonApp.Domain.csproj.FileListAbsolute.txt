@@ -10,3 +10,4 @@
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/refint/BonApp.Domain.dll
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.pdb
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/ref/BonApp.Domain.dll
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.Domain/obj/Debug/net9.0/BonApp.Domain.csproj.AssemblyReference.cache

@@ -13,13 +13,15 @@ public abstract class ConfigurationEntity<T> : IEntityTypeConfiguration<T> where
         // đặt khóa chính
         builder.HasKey(e => e.Id);
         // 
+        // builder.Property(c => c.Id);
+        //   .ValueGeneratedOnAdd();
         builder.Property(e => e.CreatedAt)
             .HasDefaultValueSql("GETUTCDATE()")
             .ValueGeneratedOnAdd();
 
         builder.Property(e => e.UpdatedAt)
-            .HasDefaultValueSql("CURRENT_TIMESTAMP")
-            .ValueGeneratedOnUpdate()
+            // .HasDefaultValueSql("CURRENT_TIMESTAMP")
+            // .ValueGeneratedOnUpdate()
             .IsRequired(true);
     }
 }
