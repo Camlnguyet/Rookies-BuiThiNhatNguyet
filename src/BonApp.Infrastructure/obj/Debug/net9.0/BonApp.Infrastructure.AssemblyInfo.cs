@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BonApp.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c39042a885543962fe6e1e714fd1abcabed576f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecf2760354e4db502ec410c497b50d00e7172f5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BonApp.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BonApp.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
