@@ -241,3 +241,4 @@
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.WebUI/bin/Debug/net9.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.WebUI/bin/Debug/net9.0/BonApp.Application.dll
 /Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.WebUI/bin/Debug/net9.0/BonApp.Application.pdb
+/Users/chocodark/NashRookie/BonApppetit-V1/Rookies-BuiThiNhatNguyet/src/BonApp.WebUI/bin/Debug/net9.0/Newtonsoft.Json.dll

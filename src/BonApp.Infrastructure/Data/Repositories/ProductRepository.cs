@@ -11,8 +11,9 @@ public class ProductRepository : IProductRepository
     {
         _context = context;
     }
-    public IQueryable<Product> Products => _context.Products;
-    public IQueryable<Category> Categories => _context.Categories;
+    public IQueryable<Product> Products => _context.Products.AsQueryable();
+
+    public IUnitOfWork UnitOfWork => _context;
 
     public void Add(Product product)
     {
@@ -36,12 +37,11 @@ public class ProductRepository : IProductRepository
     }
 
     // viết một cái thêm nhiều sản phẩm 
-    public async Task AddAsync(Product product)
+    public async Task CreateAsync(Product product)
     {
-        await _context.AddAsync(product);
+        await _context.Products.AddAsync(product);
 
     }
-
     public async Task<IEnumerable<Product>> GetAllAsync()
     {
         return await _context.Products.ToListAsync();

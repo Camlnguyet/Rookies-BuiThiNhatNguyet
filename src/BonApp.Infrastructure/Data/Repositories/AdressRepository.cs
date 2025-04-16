@@ -13,9 +13,8 @@ public class AdressRepository : IAddressRepository
         _context = context;
     }
 
-    public IQueryable<Address> Addresses => _context.Addresses;
-
-    public IQueryable<User> Users => _context.Users;
+    public IQueryable<Address> Addresses => _context.Addresses.AsQueryable();
+    public IUnitOfWork UnitOfWork => _context;
 
     public void Add(Address address)
     {
@@ -28,5 +27,17 @@ public class AdressRepository : IAddressRepository
     public void Update(Address address)
     {
         _context.Addresses.Update(address);
+    }
+    public async Task CreateAsync(Address address)
+    {
+        await _context.Addresses.AddAsync(address);
+    }
+    public async Task<IEnumerable<Address>> GetAllAsync()
+    {
+        return await _context.Addresses.ToListAsync();
+    }
+    public async Task SaveChangesAsync()
+    {
+        await _context.SaveChangesAsync();
     }
 }

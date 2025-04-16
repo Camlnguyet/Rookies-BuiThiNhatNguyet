@@ -15,7 +15,7 @@ public static class InfrastructureServiceRegistration
     {
         services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
         services.AddScoped<IProductRepository, ProductRepository>();
-        services.AddScoped<IProductService, ProductService>();
+        // 
         return services;
     }
 }

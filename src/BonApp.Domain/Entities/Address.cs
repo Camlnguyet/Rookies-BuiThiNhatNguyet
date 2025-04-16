@@ -9,6 +9,7 @@ public class Address : BaseEntity
     public string Ward { get; set; } = default!;
     public string? Street { get; set; }
     public string? HouseNumber { get; set; }
+    public string HashKey { get; set; } = default!;
     public int UserId { get; set; }
-    public virtual required User User { get; set; }
+    public virtual User User { get; set; }
 }

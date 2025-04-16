@@ -1,14 +1,24 @@
 using BonApp.Domain.Interfaces;
 using BonApp.Infrastructure.Data.Repositories;
+using BonApp.WebUI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BonApp.WebUI.Controllers;
 
 public class ProductController : Controller
 {
-    private IProductRepository productRepository { get; set; }
-    public ProductController()
+    private readonly ProductService _productService;
+
+    public ProductController(ProductService productService)
     {
-        // productRepository = new ProductRepository();
+        _productService = productService;
     }
+
+    public async Task<IActionResult> Index()
+    {
+        var products = await _productService.GetAllAsync();
+        return View(products);
+    }
+
 }
+

@@ -35,6 +35,8 @@ builder.Services.AddScoped<ICsvProductImporter, CsvProductImporter>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICsvCategoryImporter, CsvCategoryImporter>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 // builder.Services.AddInfrastructureServices();
 // builder.Services.AddApplication

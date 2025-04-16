@@ -9,7 +9,8 @@ public interface IProductRepository
     // Task<IEnumerable<T>> FindAsync (Expression<Func<T, bool>> predicate);
     // join bảng, viết query điều kiện 
     IQueryable<Product> Products { get; }
-    IQueryable<Category> Categories { get; }
+    IUnitOfWork UnitOfWork { get; }
+
     void Add(Product product);
     void Update(Product product);
     void Delete(Product product);
@@ -18,6 +19,6 @@ public interface IProductRepository
 
     // Lưu thay đổi (nếu dùng Unit of work, phương thức này có thể không cần)
     Task SaveChangesAsync();
-    Task AddAsync(Product product);
+    Task CreateAsync(Product product);
     Task<IEnumerable<Product>> GetAllAsync();
 }

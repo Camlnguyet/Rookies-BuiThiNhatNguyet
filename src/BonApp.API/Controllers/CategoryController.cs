@@ -34,7 +34,7 @@ public class CategoryController : ControllerBase
 
     // POST: api/categories
     [HttpPost]
-    public async Task<IActionResult> AddCategories([FromBody] CategoryDto dto)
+    public async Task<IActionResult> AddCategory([FromBody] CategoryDto dto)
     {
         var category = await categoryService.CreateCategoryAsync(dto);
         if (category == null)

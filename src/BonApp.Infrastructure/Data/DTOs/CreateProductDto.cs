@@ -2,7 +2,6 @@ namespace BonApp.Infrastructure.Data.DTOs;
 
 public class CreateProductDto
 {
-    public int Id { get; set; }
     public string ProductName { get; set; } = default!;
     public string ProductDescription { get; } = string.Empty;
     public decimal Price { get; set; }
