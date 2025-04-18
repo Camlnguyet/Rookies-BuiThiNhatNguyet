@@ -1,0 +1,8 @@
+namespace BonApp.Infrastructure.Data.DTOs;
+
+public class AuthResponseDto
+{
+    public string Token { get; set; }
+    public string UserName { get; set; }
+    public string Email { get; set; }
+}

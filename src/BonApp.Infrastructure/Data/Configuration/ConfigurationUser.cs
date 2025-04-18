@@ -10,7 +10,7 @@ public class ConfigurationUser : ConfigurationEntity<User>
     {
         base.Configure(builder);
         builder.Property(e => e.UserName).IsRequired(true).HasMaxLength(100);
-        builder.Property(e => e.Password).IsRequired(true).HasMaxLength(30);
+        builder.Property(e => e.PasswordHash).IsRequired(true);
         builder.Property(e => e.FirstName).IsRequired(true).HasMaxLength(100);
         builder.Property(e => e.LastName).IsRequired(true).HasMaxLength(30);
         builder.Property(e => e.Email).IsRequired(true).HasMaxLength(255).HasColumnType("varchar(255)");

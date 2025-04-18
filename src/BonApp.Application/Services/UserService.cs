@@ -39,7 +39,7 @@ public class UserService : IUserService
             PhoneNumber = dto.PhoneNumber,
             Role = dto.Role,
             UserName = dto.UserName,
-            Password = dto.Password,
+            PasswordHash = dto.Password,
         };
 
         await _userRepository.CreateAsync(user);

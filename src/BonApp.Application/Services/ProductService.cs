@@ -22,9 +22,12 @@ public class ProductService : IProductService
     {
         return await _productRepository.Products.ToListAsync();
     }
-    public Task<Product> GetProductAsync(int productId)
+    public async Task<ProductDetailDto?> GetProductByIdAsync(int productId)
     {
-        throw new NotImplementedException();
+        // chưa check nè
+        // throw new NotImplementedException();
+        var product = await _productRepository.Products.FirstOrDefaultAsync(x => x.Id == productId);
+        return product == null ? null : _mapper.Map<ProductDetailDto>(product);
     }
     public async Task<bool> IsProductAvailableAsync(string name)
     {
@@ -44,5 +47,10 @@ public class ProductService : IProductService
         await _productRepository.UnitOfWork.SaveChangesAsync();
 
         return Product;
+    }
+
+    public Task<Product> GetProductAsync(int productId)
+    {
+        throw new NotImplementedException();
     }
 }

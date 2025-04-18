@@ -2,11 +2,13 @@ using BonApp.Application.Interfaces;
 using BonApp.Application.Services;
 using BonApp.Domain.Interfaces;
 using BonApp.Infrastructure.Data.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BonApp.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : Controller
@@ -81,7 +83,7 @@ public class UserController : Controller
         user.FirstName = dto.FirstName;
         user.Email = dto.Email;
         user.UserName = dto.UserName;
-        user.Password = dto.Password;
+        user.PasswordHash = dto.Password;
         user.PhoneNumber = dto.PhoneNumber;
 
         await _userRepository.SaveChangesAsync();

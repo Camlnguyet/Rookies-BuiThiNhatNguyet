@@ -2,11 +2,13 @@ using BonApp.Application.Interfaces;
 using BonApp.Domain.Interfaces;
 using BonApp.Domain.Interfaces.Service;
 using BonApp.Infrastructure.Data.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BonApp.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class CategoryController : ControllerBase

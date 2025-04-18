@@ -5,9 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using BonApp.Domain.Entities;
 using BonApp.Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BonApp.API.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ProductController : ControllerBase

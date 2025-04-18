@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BonApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c91f7353247eeca33ffe937038e0aedd3ade57db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a4b2b2c5db2c3942616f0b0748307fbf9a34c63")]
 [assembly: System.Reflection.AssemblyProductAttribute("BonApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BonApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

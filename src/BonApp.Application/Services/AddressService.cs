@@ -34,12 +34,14 @@ public class AddressService : IAddressService
             Street = dto.Street,
             HouseNumber = dto.HouseNumber,
             UserId = dto.UserId,
+
         };
         var hashAddress = AddressHasher.GenerateHash(address);
         if (await IsAddressExistAsync(hashAddress))
         {
             return null;
         }
+        address.HashKey = hashAddress;
         await _addressRepository.CreateAsync(address);
         await _addressRepository.UnitOfWork.SaveChangesAsync();
         return address;
@@ -56,8 +58,20 @@ public class AddressService : IAddressService
         return address == null ? null : _mapper.Map<AddressDto>(address);
     }
 
-    public Task<IEnumerable<Address>> GetAllAddressesAsync()
+    public async Task<IEnumerable<Address>> GetAllAddressesAsync()
     {
-        throw new NotImplementedException();
+        return await _addressRepository.Addresses.ToListAsync();
     }
+
+    // public async Task<bool> DeleteAddressAsync(int id)
+    // {
+    //     var address = await _addressRepository.Addresses.FirstOrDefaultAsync(p => p.Id == id);
+    //     if (address == null)
+    //     {
+    //         return false;
+    //     }
+    //     _addressRepository.Delete(address);
+    //     await _addressRepository.UnitOfWork.SaveChangesAsync();
+    //     return true;
+    // }
 }

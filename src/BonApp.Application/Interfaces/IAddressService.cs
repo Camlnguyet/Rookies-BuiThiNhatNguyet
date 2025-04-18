@@ -9,4 +9,5 @@ public interface IAddressService
     Task<Address?> CreateAddressAsync(AddressDto dto);
     Task<AddressDto?> GetAddressByIdAsync(int id);
     Task<IEnumerable<Address>> GetAllAddressesAsync();
+    // Task<bool> DeleteAddressAsync(int id);
 }
