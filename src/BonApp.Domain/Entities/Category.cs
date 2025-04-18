@@ -1,4 +1,3 @@
-
 namespace BonApp.Domain.Entities;
 
 public class Category : BaseEntity

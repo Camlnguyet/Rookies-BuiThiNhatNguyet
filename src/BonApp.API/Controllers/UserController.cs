@@ -8,13 +8,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BonApp.API.Controllers;
 
-[Authorize]
+// [Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class UserController : Controller
 {
     private readonly IUserService _userService;
     private readonly IUserRepository _userRepository;
+
 
     public UserController(IUserService userService, IUserRepository userRepository)
     {

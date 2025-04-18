@@ -12,14 +12,12 @@ public class ReviewRepository : IReviewRepository
         _context = context;
     }
     public IQueryable<Review> Reviews => _context.Reviews.AsQueryable();
-    public IUnitOfWork unitOfWork => _context;
-
+    public IUnitOfWork UnitOfWork => _context;
     public void Add(Review review)
     {
         _context.Reviews.Add(review);
     }
-
-    public async Task AddAsync(Review review)
+    public async Task CreateAsync(Review review)
     {
         await _context.Reviews.AddAsync(review);
     }
@@ -28,33 +26,14 @@ public class ReviewRepository : IReviewRepository
     {
         _context.Reviews.Remove(review);
     }
-
-    public async Task DeleteAsync(Review review)
+    public async Task<IEnumerable<Review>> GetAllAsync()
     {
-        _context.Reviews.Remove(review);
-        await _context.SaveChangesAsync();
+        return await _context.Reviews.ToListAsync();
     }
-
-    public async Task<Review?> GetByIdAsync(int id)
-    {
-        // tận dụng bộ nhớ context database
-        return await _context.Reviews.FindAsync(id);
-    }
-
-    public async Task<IEnumerable<Review>> GetByProductIdAsync(int productId)
-    {
-        // return await _context.Reviews.ToListAsync();
-        return await _context.Reviews
-            .Include(r => r.User)
-            .Where(r => r.ProductId == productId)
-            .ToListAsync();
-    }
-
     public async Task SaveChangeAsync()
     {
         await _context.SaveChangesAsync();
     }
-
     public void Update(Review review)
     {
         _context.Reviews.Update(review);

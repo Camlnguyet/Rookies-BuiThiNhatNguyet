@@ -20,6 +20,8 @@ public class AppDbContext : DbContext, IUnitOfWork
     public DbSet<CartDetail> CartsDetail { get; set; }
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Review> Reviews { get; set; }
+    public DbSet<ImageProduct> ImageProducts { get; set; }
+    public DbSet<Role> Roles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

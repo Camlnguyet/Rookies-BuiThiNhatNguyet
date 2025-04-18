@@ -12,7 +12,6 @@ public class AdressRepository : IAddressRepository
     {
         _context = context;
     }
-
     public IQueryable<Address> Addresses => _context.Addresses.AsQueryable();
     public IUnitOfWork UnitOfWork => _context;
 

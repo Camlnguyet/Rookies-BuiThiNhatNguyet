@@ -6,15 +6,13 @@ public interface IReviewRepository
 {
     // Lấy entity theo ID
     IQueryable<Review> Reviews { get; }
-    IUnitOfWork unitOfWork { get; }
+    IUnitOfWork UnitOfWork { get; }
     void Add(Review review);
     // Cập nhập entity
     void Update(Review review);
     // Xóa entity
     void Delete(Review review);
-    Task<IEnumerable<Review>> GetByProductIdAsync(int productId);
-    Task<Review> GetByIdAsync(int id);
+    Task<IEnumerable<Review>> GetAllAsync();
     Task SaveChangeAsync();
-    Task AddAsync(Review review);
-    Task DeleteAsync(Review review);
+    Task CreateAsync(Review review);
 }

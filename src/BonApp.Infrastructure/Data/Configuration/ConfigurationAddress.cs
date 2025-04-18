@@ -11,7 +11,7 @@ public class ConfigurationAddress : ConfigurationEntity<Address>
     {
         base.Configure(builder);
 
-        builder.Property(e => e.City).IsRequired(true).HasMaxLength(100);
+        builder.Property(e => e.CityProvince).IsRequired(true).HasMaxLength(100);
         builder.Property(e => e.District).IsRequired(true).HasMaxLength(100);
         builder.Property(e => e.Ward).IsRequired(true).HasMaxLength(100);
         builder.Property(e => e.Street).IsRequired(false).HasMaxLength(200);

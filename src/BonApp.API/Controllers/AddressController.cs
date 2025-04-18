@@ -2,11 +2,12 @@ using BonApp.Application.Interfaces;
 using BonApp.Domain.Interfaces;
 using BonApp.Infrastructure.Data.DTOs;
 using BonApp.Infrastructure.Hasing;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BonApp.API.Controllers;
-
+[Authorize]
 [ApiController]
 [Route("/api/[controller]")]
 public class AddressController : Controller

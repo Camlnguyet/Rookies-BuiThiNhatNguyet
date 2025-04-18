@@ -1,10 +1,8 @@
-
-
 namespace BonApp.Domain.Entities;
 
 public class Address : BaseEntity
 {
-    public string City { get; set; } = default!;
+    public string CityProvince { get; set; } = default!;
     public string District { get; set; } = default!;
     public string Ward { get; set; } = default!;
     public string? Street { get; set; }
